@@ -11,7 +11,14 @@ func main() {
     "Never": 1,
     "Up":  4,
   }
-	for key, value := range config {
-		fmt.Println(key, "=", value)
+  the_most_popular_word := ""
+  count := 0
+	for key, value := range words {
+		if count < value {
+			the_most_popular_word = key
+			count = value
+		}
 	}
+	fmt.Println("Most popular word:",  the_most_popular_word)
+	fmt.Println("With a count of:",  count)
 }
