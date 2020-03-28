@@ -6,13 +6,8 @@ import (
 )
 
 func main() {
-	itemsSold()
-}
-
-func itemsSold() {
 	hdr := []string{"empid","employee","address","hours worked","hourly rate","manager"}
 	csvHdrCol(hdr)
-
 	hdr2 := []string{"employee","empid","hours worked","address","manager","hourly rate"}
 	csvHdrCol(hdr2)
 }
@@ -29,6 +24,6 @@ func csvHdrCol(header []string) {
 		case "hourly rate":
 		        csvHeadersToColumnIndex[i] = v
 		}
-	fmt.Println(csvHeadersToColumnIndex)
 	}
+	fmt.Println(csvHeadersToColumnIndex)
 }
